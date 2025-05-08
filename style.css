@@ -4,14 +4,15 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+}
+:root{
 
 }
 li, a, button {
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 500;
-    background: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
-    color: #edf0f1;
+    background-color: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
     font-size: 16px;
 }
 img {
@@ -20,36 +21,58 @@ img {
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 30px 10px;
-    background-color: #1A1A1A;
+    padding: 30px 10%;
 }
 .logo{
     cursor: pointer;
+    margin-right: auto;
 }
-.nav_links{
+.nav__links{
     list-style: none;
 }
-.nav_links li{
+.nav__links li{
     display: inline-block;
-    padding: 0 20px;
+    padding: 0px 20px;
 }
-.nav_links li a{
+.nav__links li a{
     transition: all 0.3s ease 0s;
 }
-.nav_links li a:hover{
-    color: #005B96;
+.nav__links li a:hover{
+    color: #0088a9;
 }   
 button{
+    margin-left: 20px;
     padding: 9px 25px;
     border: none;
     border-radius: 50px;
     background-color: rgba(0, 136, 169, 1);
-    color: #edf0f1;
+    color: black;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 button:hover{
-    background-color: #005B96;
+    background-color: rgba(0, 136, 169, 0.8);
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #66CCFF, #0077CC, #005B96, #1A1A1A, #333333);
+    background-size: 300% 300%;
+    animation: color 10s ease-in-out infinite;
+}
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 100%;
+    }
+}
+header{
+    background-color: black;
 }
