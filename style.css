@@ -5,14 +5,12 @@
     box-sizing: border-box;
     padding: 0;
 }
-:root{
 
-}
 li, a, button {
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 500;
-    background-color: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    color: white;
     font-size: 16px;
 }
 img {
@@ -24,6 +22,8 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
+    background-color: black;
+    position:sticky
 }
 .logo{
     cursor: pointer;
@@ -34,13 +34,15 @@ header{
 }
 .nav__links li{
     display: inline-block;
-    padding: 0px 20px;
-}
+    padding: 0px 20px;}
 .nav__links li a{
     transition: all 0.3s ease 0s;
+    background-color: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    animation: color 15s ease-in-out infinite;
 }
 .nav__links li a:hover{
-    color: #0088a9;
+    background-color: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    animation: color 8s ease-in-out infinite;
 }   
 button{
     margin-left: 20px;
@@ -53,14 +55,15 @@ button{
     transition: all 0.3s ease 0s;
 }
 button:hover{
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    animation: color 15s ease-in-out infinite;
 }
 .container{
     height: 100vh;
     width: 100%;
     background: linear-gradient(45deg, #66CCFF, #0077CC, #005B96, #1A1A1A, #333333);
     background-size: 300% 300%;
-    animation: color 10s ease-in-out infinite;
+    animation: color 15s ease-in-out infinite;
 }
 @keyframes color {
     0%{
@@ -73,6 +76,14 @@ button:hover{
         background-position: 0 100%;
     }
 }
-header{
-    background-color: black;
+#search__container{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 30px;
+    margin-right: 20px;
+}
+#topButton{
+    bottom: right;
+    position:fixed
 }
