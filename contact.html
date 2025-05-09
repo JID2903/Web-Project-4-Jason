@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and title of the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Naawi-Oodena</title>
+    
+    <!-- Internal CSS for styling the page -->
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the container that holds the form */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            text-align: center;
+            color: #005f73;
+        }
+
+        /* Styling for the form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Styling for form labels */
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Styling for input fields, textarea, and button */
+        input, textarea, button {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Styling for the submit button */
+        button {
+            background-color: #005f73;
+            color: #ffffff;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Hover effect for the submit button */
+        button:hover {
+            background-color: #0a9396;
+        }
+
+        /* Styling for the back button */
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #005f73;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        /* Hover effect for the back button */
+        .back-button:hover {
+            background-color: #0a9396;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the contact form -->
+    <div class="container">
+        <!-- Page heading -->
+        <h1>Contact Naawi-Oodena</h1>
+        
+        <!-- Contact form -->
+        <form action="#" method="post">
+            <!-- Input field for name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Input field for email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Textarea for the message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Back button to navigate to the home page -->
+        <a href="index.html" class="back-button">Go Back to Home</a>
+        <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            window.location.href = 'index.html'; // Redirect to home page
+            });
+        </script>
+    </div>
+</body>
+</html>
