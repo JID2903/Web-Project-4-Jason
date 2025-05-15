@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Info</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Naawi-Oodena | Urban Indigenous Reserve</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f7f7f7;
+      color: #333;
+    }
+    h1, h2 {
+      color: #1a4d2e;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    details summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #005b96;
+      margin-top: 10px;
+    }
+    details[open] summary::after {
+      content: " ▲";
+    }
+    summary::after {
+      content: " ▼";
+    }
+  </style>
 </head>
 <body>
-    <header>
-                <img class="logo" src="naawiOodenalogo.png" alt="Naawi-Oodena Logo">
-        <form action="https://chatgpt.com" method="get" class="search-bar">
-            <input type="text" placeholder="Search..." name="q" required>
-            <button type="submit">
-                <span class="material-symbols-outlined">search</span>
-            </button>
-        </form>
-        <nav>
-            <ul class="nav__links">
-                <li><a href="index.html" id>Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="moreinfo.html">More Info <span class="dropdown-arrow">▼</span></a>
-                    <ul class="dropdown-content">
-                        <li><a href="sports.html">Sports</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Areas</a></li>
-                    </ul>
-                </li>
-        </nav>
-        <a class="cta" href="contact.html"><button>Contact</button></a>
-    </header>
-    <h1>Naawi-Oodena: Centre of the Heart and Community</h1>
+
+  <h1>Naawi-Oodena: Centre of the Heart and Community</h1>
 
   <section id="about">
     <h2>About</h2>
@@ -99,5 +103,6 @@
       <p>Recent university panels and news coverage highlight the importance of Naawi-Oodena as a model of Indigenous-led urban development. Coverage includes Winnipeg Free Press, CBC, and Global News.</p>
     </details>
   </section>
+
 </body>
 </html>
