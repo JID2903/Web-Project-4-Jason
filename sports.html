@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sports Recreation Center - Team Tryouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style-2.css">
+</head>
+<body>
+    <header>
+    <img class="logo" src="naawiOodenalogo.png" alt="Naawi-Oodena Logo">
+        <form action="https://chatgpt.com" method="get" class="search-bar">
+            <input type="text" placeholder="Search..." name="q" required>
+            <button type="submit">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </form>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html" id>Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="moreinfo.html">More Info <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="areas.html">Areas</a></li>
+                    </ul>
+                </li>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+    <main>
+    <div class="container">
+        <!-- Page 1: About -->
+        <section id="about">
+            <h2>About Our Recreation Center</h2>
+            <p>
+                Welcome to the Sports Recreation Center! We offer a wide range of sports and activities for all ages and skill levels. Our mission is to promote health, teamwork, and community through organized sports and recreation.
+            </p>
+            <ul>
+                <li>State-of-the-art indoor and outdoor facilities</li>
+                <li>Professional coaching staff</li>
+                <li>Leagues, tournaments, and open play</li>
+                <li>Official team tryouts for basketball, soccer, and volleyball</li>
+            </ul>
+        </section>
+
+        <!-- Page 2: Team Tryouts -->
+        <section id="tryouts">
+            <h2>Naawi Moose's Official Team Tryouts</h2>
+            <p>
+                Ready to join a team? Check out our upcoming official tryouts for the following sports:
+            </p>
+            <ul class="tryout-list">
+                <li>
+                    <strong>Basketball</strong><br>
+                    Date: July 15, 2025<br>
+                    Time: 5:00 PM - 8:00 PM<br>
+                    Location: Main Gymnasium
+                </li>
+                <li>
+                    <strong>Soccer</strong><br>
+                    Date: July 17, 2025<br>
+                    Time: 4:00 PM - 7:00 PM<br>
+                    Location: Outdoor Field A
+                </li>
+                <li>
+                    <strong>Volleyball</strong><br>
+                    Date: July 20, 2025<br>
+                    Time: 6:00 PM - 9:00 PM<br>
+                    Location: Court 2
+                </li>
+            </ul>
+            <p>
+                All skill levels are welcome. Please bring appropriate gear and arrive 15 minutes early for registration.
+            </p>
+        </section>
+
+        <!-- Page 3: Sign Up -->
+        <section id="signup">
+            <h2>Sign Up for Tryouts</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="10" max="60" required>
+
+                <label for="sport">Select Sport:</label>
+                <select id="sport" name="sport" required>
+                    <option value="">--Choose a sport--</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="volleyball">Volleyball</option>
+                </select>
+
+                <br><label for="experience">Previous Experience (optional):</label>
+                <textarea id="experience" name="experience" rows="3"></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </div>
+    </main>
+    <footer>
+        &copy; 2025 Naawi Oodena Sports Recreation Center. All rights reserved.
+    </footer>
+</body>
+</html>

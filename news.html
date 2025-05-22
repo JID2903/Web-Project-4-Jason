@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Everyday News</title>
+    <link rel="stylesheet" href="style-2.css">
+</head>
+<body>
+        <header>
+        <img class="logo" src="naawiOodenalogo.png" alt="Naawi-Oodena Logo">
+        <form action="https://chatgpt.com" method="get" class="search-bar">
+            <input type="text" placeholder="Search..." name="q" required>
+            <button type="submit">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </form>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html" id>Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="moreinfo.html">More Info <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="areas.html">Areas</a></li>
+                    </ul>
+                </li>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+<div class="container">
+    <main>
+        <section id="world" tabindex="6">
+            <h2>World News</h2>
+            <article>
+                <h3>Global Event Highlights</h3>
+                <p>Major events are unfolding around the globe, impacting millions of lives.</p>
+            </article>
+            <div class="comments">
+                <h4>Comments</h4>
+                <form>
+                    <label for="comment-world">Add a comment:</label>
+                    <textarea id="comment-world" name="comment-world" rows="2" tabindex="7"></textarea>
+                    <button type="submit" tabindex="8">Post</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="technology" tabindex="9">
+            <h2>Technology</h2>
+            <article>
+                <h3>Latest Tech Trends</h3>
+                <p>Innovations in technology are shaping the future at a rapid pace.</p>
+            </article>
+            <div class="comments">
+                <h4>Comments</h4>
+                <form>
+                    <label for="comment-tech">Add a comment:</label>
+                    <textarea id="comment-tech" name="comment-tech" rows="2" tabindex="10"></textarea>
+                    <button type="submit" tabindex="11">Post</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="sports" tabindex="12">
+            <h2>Sports</h2>
+            <article>
+                <h3>Sports Updates</h3>
+                <p>Catch up on the latest scores and highlights from your favorite teams.</p>
+            </article>
+            <div class="comments">
+                <h4>Comments</h4>
+                <form>
+                    <label for="comment-sports">Add a comment:</label>
+                    <textarea id="comment-sports" name="comment-sports" rows="2" tabindex="13"></textarea>
+                    <button type="submit" tabindex="14">Post</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="naawi-oodena" tabindex="15">
+            <h2>Naawi-Oodena</h2>
+            <article>
+                <h3>Community Spotlight: Naawi-Oodena</h3>
+                <p>Naawi-Oodena is a vibrant and growing community, making headlines for its unique initiatives and cultural significance.</p>
+            </article>
+            <div class="comments">
+                <h4>Comments</h4>
+                <form>
+                    <label for="comment-naawi">Add a comment:</label>
+                    <textarea id="comment-naawi" name="comment-naawi" rows="2" tabindex="16"></textarea>
+                    <button type="submit" tabindex="17">Post</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+    <footer>
+        <p tabindex="18">&copy; 2025 Everyday News</p>
+    </footer>
+</body>
+</html>

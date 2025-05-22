@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.5;
+}
+
+li, a, button {
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1vw;
+}
+
+img {
+    width: 6vw;
+    height: 6vw;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2vh 10vw;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+.logo:active{
+    transform: scale(0.95);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    background-color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: color 15s ease-in-out infinite;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.nav__links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: var(--hover-bg-gradient);
+    transition: left 0.3s ease;
+}
+
+.nav__links li a:hover::after {
+    left: 0;
+}
+
+.nav__links li a:hover {
+    background: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: color 2s ease-in-out infinite;
+}
+
+button {
+    margin-left: 2vw;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(0, 136, 169, 1);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 1vw;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    color: white;
+    animation: color 6s ease-in-out infinite, pulse 0.5s infinite;
+}
+
+button:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+button:active:after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% { transform: scale(0, 0); opacity: 0.5; }
+    100% { transform: scale(20, 20); opacity: 0; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.96); opacity: 0.8; }
+    100% { transform: scale(1); }
+}
+
+.container {
+    width: 100%;
+    padding: 5vh 10vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background: linear-gradient(45deg, #66CCFF, #0077CC, #005B96, #1A1A1A, #333333);
+    background-size: 300% 300%;
+    animation: color 15s ease-in-out infinite;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #66CCFF, #0077CC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(102, 204, 255, 0.3);
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #66CCFF, #0077CC);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* Footer Enhancement */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(102, 204, 255, 0.3);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Animation for Sections */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.3s; }
+section:nth-child(3) { animation-delay: 0.5s; }
+
+/* Decorative Elements */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #66CCFF, #0077CC);
+    border-radius: 5px 0 0 5px;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    padding: 0.5vh 2vw;
+    border-radius: 25px;
+    width: 30%;
+    font-size: 1vw;
+    outline: none;
+    width: max-content;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9vw;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    li, a, button {
+        font-size: 3vw;
+    }
+    
+    button {
+        padding: 1vh 4vw;
+    }
+    
+    .search-bar {
+        font-size: 3vw;
+        width: 50%;
+    }
+    
+    .dropdown-content a {
+        font-size: 3vw;
+    }
+}
+
+:root {
+    --font-color: white;
+    --background-color: black;
+    --button-bg-color: rgba(0, 136, 169, 1);
+    --hover-bg-gradient: linear-gradient(90deg, #005B96, #0077CC, #66CCFF, #1A1A1A, #333333);
+    --container-bg-gradient: linear-gradient(45deg, #66CCFF, #0077CC, #005B96, #1A1A1A, #333333);
+    --dropdown-bg-color: #f9f9f9;
+    --dropdown-hover-bg-color: #f1f1f1;
+    --dropdown-link-bg-color: black;
+    --dropdown-link-hover-color: black;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
