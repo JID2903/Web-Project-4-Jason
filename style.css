@@ -128,14 +128,22 @@ button:hover {
 
 .search-bar {
     position: absolute;
-    left: 40%;
-    transform: translateX(-50%);
-    padding: 0.5vh 2vw;
-    border-radius: 25px; /* Rounded edges */
-    width: 30%;
-    font-size: 1vw;
-    outline: none;
-    width: max-content;
+    left: 40%; /* Percentage-based horizontal positioning */
+    transform: translateX(-50%); /* Centers the element relative to its left position */
+    padding: 0.5% 2%; /* Percentage-based padding (vertical, horizontal) */
+    border-radius: 50px; /* Fixed pixel value for consistent rounded corners */
+    width: 30%; /* Percentage-based width relative to parent */
+    max-width: 500px; /* Optional: Prevent it from getting too wide */
+    min-width: 5px; /* Optional: Prevent it from getting too narrow */
+    font-size: 1vw; /* Viewport-relative font size (kept as is) */
+    transition: all 0.3s ease; /* Smooth transitions for interactions */
+}
+
+/* Focus/Hover Enhancements */
+.search-bar:focus {
+    border-color: rgba(0, 136, 169, 0.8);
+    box-shadow: 0 0 8px rgba(0, 136, 169, 0.2); /* Soft glow */
+    width: 35%; /* Expands slightly on focus */
 }
 
 /* Dropdown styles */
@@ -315,4 +323,27 @@ p {
     --dropdown-link-bg-color: black;
     --dropdown-link-hover-color: black;
     --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  color: white;
+}
+section {
+  background: linear-gradient(45deg, #66CCFF, #0077CC, #005B96, #1A1A1A, #333333);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #005b96;
+  margin-top: 10px;
+}
+details[open] summary::after {
+  content: " ▲";
+}
+summary::after {
+  content: " ▼";
 }
